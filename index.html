@@ -21,21 +21,30 @@
     />
     <script src="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.js"></script>
   </head>
+
+  <style type="text/tailwindcss">
+    @utility btn-icon {
+      @apply flex items-center justify-center w-6 h-6;
+      @apply border border-transparent rounded-full;
+      @apply hover:border-white hover:cursor-pointer;
+      @apply dark:hover:border-transparent dark:hover:bg-slate-600;
+    }
+  </style>
   <body
-    class="h-screen bg-slate-150 dark:bg-slate-900/95 text-slate-800 dark:text-slate-100"
+    class="h-screen bg-slate-200/50 dark:bg-slate-900/95 text-slate-900 dark:text-slate-100"
   >
     <div class="flex h-full">
       <aside
-        class="hidden border-r border-slate-400/50 bg-slate-300 dark:bg-slate-900 dark:border-slate-200/20 md:flex md:flex-col md:h-full"
+        class="hidden border-r border-slate-400/50 bg-slate-300 dark:bg-slate-900 dark:border-slate-200/20 md:flex md:flex-col md:h-full md:w-[12rem]"
       >
         <h2 class="text-lg text-center font-semibold p-1">Dashboard</h2>
-        <hr class="border border-slate-300 dark:border-slate-700" />
+        <hr class="border border-slate-600/50 dark:border-slate-700" />
         <nav
-          class="flex flex-col gap-y-1 text-sm h-full p-2 *:hover:bg-slate-300 *:dark:hover:bg-slate-600 *:rounded-sm *:py-1 *:px-2"
+          class="flex flex-col gap-y-1 text-sm h-full p-2 *:hover:bg-slate-200 *:dark:hover:bg-slate-600 *:rounded-sm *:py-1 *:px-2"
         >
           <a
             href="#"
-            class="flex items-center gap-2 bg-blue-200 hover:bg-blue-200 dark:bg-blue-600 dark:hover:bg-blue-600"
+            class="flex items-center gap-2 bg-blue-300 hover:bg-blue-300! dark:bg-blue-600 dark:hover:bg-blue-600!"
           >
             <i class="fa-solid fa-house"></i>
             <p>Inicio</p>
@@ -62,12 +71,12 @@
           </a>
         </nav>
         <div
-          class="border-t border-slate-400/50 dark:border-slate-200/50 flex justify-between text-sm p-2"
+          class="border-t border-slate-600/50 dark:border-slate-200/50 flex justify-between text-sm p-2"
         >
           <a href="#">
             <i class="fa-solid fa-circle-user"></i>
           </a>
-          <a href="#">
+          <a href="#" class="btn-icon">
             <i class="fa-solid fa-arrow-right-from-bracket"></i>
           </a>
         </div>
@@ -75,32 +84,32 @@
       <div class="flex flex-col flex-1">
         <header class="bg-slate-300 dark:bg-slate-900">
           <nav class="flex justify-between items-center p-2">
-            <div class="flex items-center gap-2">
-              <button class="hover:cursor-pointer md:hidden">
+            <div class="flex items-center gap-2 w-full">
+              <button class="btn-icon md:hidden">
                 <i class="fa-solid fa-bars"></i>
               </button>
               <div
-                class="hidden md:flex items-center text-xs bg-slate-700/60 rounded-full py-1 px-2 gap-2"
+                class="hidden text-xs rounded-full py-1 px-2 bg-slate-100 dark:bg-slate-700/60! md:flex md:flex-1 md:items-center md:gap-2 md:max-w-[30%]"
               >
                 <i class="fa-solid fa-magnifying-glass"></i>
                 <input
-                  class="bg-transparent border-0 text-xs p-0 w-[8rem]"
+                  class="flex-1 bg-transparent border-transparent text-xs p-0"
                   type="search"
                   value="Search"
                 />
               </div>
             </div>
             <div class="flex items-center gap-2">
-              <button class="md:hidden">
+              <button class="btn-icon md:hidden">
                 <i class="hidden fa-solid fa-magnifying-glass"></i>
               </button>
-              <button>
+              <button class="btn-icon">
                 <i class="fa-regular fa-bell"></i>
               </button>
-              <button>
+              <button class="btn-icon">
                 <i class="fa-regular fa-envelope"></i>
               </button>
-              <button>
+              <button class="cursor-pointer">
                 <i class="fa-regular fa-circle-user"></i>
               </button>
             </div>
